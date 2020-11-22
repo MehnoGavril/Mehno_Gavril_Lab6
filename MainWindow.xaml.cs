@@ -42,8 +42,8 @@ namespace Mehno_Gavril_Lab6
 
         Binding cmbCustomersBinding = new Binding();
         Binding cmbInventoryBinding = new Binding();
-        private object inventoryViewSource;
 
+        CollectionViewSource inventoryViewSource;
         CollectionViewSource customerOrdersViewSource;
         public MainWindow()
         {
@@ -86,12 +86,10 @@ namespace Mehno_Gavril_Lab6
 
 
             cmbCustomers.ItemsSource = ctx.Customers.Local;
-            cmbCustomers.DisplayMemberPath = "FirstName";
             //cmbCustomers.DisplayMemberPath = "FirstName";
             cmbCustomers.SelectedValuePath = "CustId";
 
             cmbInventory.ItemsSource = ctx.Inventories.Local;
-            cmbInventory.DisplayMemberPath = "Make";
             //cmbInventory.DisplayMemberPath = "Make";
             cmbInventory.SelectedValuePath = "CarId";
 
